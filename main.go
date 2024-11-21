@@ -5,12 +5,6 @@ import (
 	"time"
 )
 
-/*
- Программа для скачивания большого файла по частям
- Дано: количество частей файла, функция, которая умеет скачивать часть файла
- Задание: написать код, который скачает все части файлов
-*/
-
 func main() {
 	start := 1
 	end := 100
@@ -20,10 +14,8 @@ func main() {
 
 	// your solution here
 
-	if errs != nil {
-		for _, v := range errs {
-			fmt.Println(v.Error())
-		}
+	for _, v := range errs {
+		fmt.Println(v.Error())
 	}
 }
 
