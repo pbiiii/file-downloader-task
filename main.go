@@ -6,22 +6,21 @@ import (
 )
 
 func main() {
-	start := 1
-	end := 100
-	chunkSize := 5
-
-	var errs []error
-
-	// your solution here
-
-	for _, v := range errs {
-		fmt.Println(v.Error())
+	errs := DownloadFile(100, 5)
+	for _, err := range errs {
+		fmt.Println(err)
 	}
 }
 
-func download(part int) error {
-	// some download and save file logic
-	time.Sleep(time.Millisecond * 500)
+func DownloadFile(partsCount, chunkSize int) []error {
+	// from := 1
+	// Your code here
+	return nil
+}
+
+func downloadPart(part int) error {
+	// some download and save file logic. Do not edit this func!!!
+	time.Sleep(time.Millisecond * 250)
 
 	if part%20 == 0 {
 		return fmt.Errorf("error downloading part %d", part)
